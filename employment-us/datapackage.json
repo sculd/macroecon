@@ -1,0 +1,388 @@
+{
+  "bytes": 31473,
+  "contributors": [
+    {
+      "email": "rufus.pollock@okfn.org",
+      "role": "maintainer",
+      "title": "Rufus Pollock"
+    },
+    {
+      "role": "author",
+      "title": "USA Bureau of Labor Statistics"
+    }
+  ],
+  "datahub": {
+    "created": "2017-11-08T21:56:00.325447",
+    "findability": "published",
+    "flowid": "core/employment-us/8",
+    "modified": "2018-03-15T06:17:25.546620",
+    "owner": "core",
+    "ownerid": "core"
+  },
+  "hash": "913d208ef470c0afe98afca5541f64a7",
+  "id": "core/employment-us",
+  "licenses": [
+    {
+      "name": "odc-pddl",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and Licence (PDDL)"
+    }
+  ],
+  "name": "employment-us",
+  "resources": [
+    {
+      "bytes": 4683,
+      "datahub": {
+        "type": "original"
+      },
+      "dpp:streamedFrom": "https://s3.amazonaws.com/rawstore.datahub.io/cb9025a93213fe1a8b96f9af60d20c67.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "mimetype": "text/csv",
+      "name": "aat1_original",
+      "path": "archive/aat1.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "title": "Year",
+            "type": "year"
+          },
+          {
+            "name": "population",
+            "title": "Civilian noninstitutional population",
+            "type": "integer"
+          },
+          {
+            "name": "labor_force",
+            "title": "Civilian labor force (Total)",
+            "type": "string"
+          },
+          {
+            "name": "population_percent",
+            "title": "% of Population",
+            "type": "number"
+          },
+          {
+            "name": "employed_total",
+            "title": "Employed Total",
+            "type": "number"
+          },
+          {
+            "name": "employed_percent",
+            "title": "Employed % of Population",
+            "type": "number"
+          },
+          {
+            "name": "agrictulture_ratio",
+            "title": "(of which) Agriculture",
+            "type": "number"
+          },
+          {
+            "name": "nonagriculture_ratio",
+            "title": "(of which) Non-Agriculture",
+            "type": "number"
+          },
+          {
+            "name": "unemployed",
+            "title": "Unemployed (Number)",
+            "type": "integer"
+          },
+          {
+            "name": "unemployed_percent",
+            "title": "Unemployed % of labor force",
+            "type": "number"
+          },
+          {
+            "name": "not_in_labor",
+            "title": "Not in labor force",
+            "type": "integer"
+          },
+          {
+            "name": "footnotes",
+            "title": "Footnotes",
+            "type": "string"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "format": "text",
+          "mimetype": "text/plain",
+          "path": "archive/aat1.txt",
+          "title": "Sodurce file from BLS (human readable plain text)"
+        }
+      ],
+      "title": "CSV file (derived)"
+    },
+    {
+      "bytes": 614,
+      "datahub": {
+        "type": "derived/report"
+      },
+      "description": "Validation report for tabular data",
+      "dpp:streamedFrom": "/tmp/tmpnwv5ikbu/core/employment-us/validation_report/data/6892db43b374b75d5b441e8a86b6a723/validation_report.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "6892db43b374b75d5b441e8a86b6a723",
+      "name": "validation_report",
+      "path": "data/validation_report.json",
+      "profile": "data-resource"
+    },
+    {
+      "bytes": 4683,
+      "datahub": {
+        "derivedFrom": [
+          "aat1"
+        ],
+        "type": "derived/csv"
+      },
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpnwv5ikbu/core/employment-us/aat1_csv/data/d7e5ec6ea0340e846fd84ae6a69519c2/aat1_csv.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "d7e5ec6ea0340e846fd84ae6a69519c2",
+      "mimetype": "text/csv",
+      "name": "aat1_csv",
+      "path": "data/aat1_csv.csv",
+      "profile": "data-resource",
+      "rowcount": 71,
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "title": "Year",
+            "type": "year"
+          },
+          {
+            "name": "population",
+            "title": "Civilian noninstitutional population",
+            "type": "integer"
+          },
+          {
+            "name": "labor_force",
+            "title": "Civilian labor force (Total)",
+            "type": "string"
+          },
+          {
+            "decimalChar": ".",
+            "groupChar": "",
+            "name": "population_percent",
+            "title": "% of Population",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "groupChar": "",
+            "name": "employed_total",
+            "title": "Employed Total",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "groupChar": "",
+            "name": "employed_percent",
+            "title": "Employed % of Population",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "groupChar": "",
+            "name": "agrictulture_ratio",
+            "title": "(of which) Agriculture",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "groupChar": "",
+            "name": "nonagriculture_ratio",
+            "title": "(of which) Non-Agriculture",
+            "type": "number"
+          },
+          {
+            "name": "unemployed",
+            "title": "Unemployed (Number)",
+            "type": "integer"
+          },
+          {
+            "decimalChar": ".",
+            "groupChar": "",
+            "name": "unemployed_percent",
+            "title": "Unemployed % of labor force",
+            "type": "number"
+          },
+          {
+            "name": "not_in_labor",
+            "title": "Not in labor force",
+            "type": "integer"
+          },
+          {
+            "name": "footnotes",
+            "title": "Footnotes",
+            "type": "string"
+          }
+        ]
+      },
+      "signed": true,
+      "sources": [
+        {
+          "format": "text",
+          "mimetype": "text/plain",
+          "path": "archive/aat1.txt",
+          "title": "Sodurce file from BLS (human readable plain text)"
+        }
+      ],
+      "title": "CSV file (derived)"
+    },
+    {
+      "bytes": 20941,
+      "datahub": {
+        "derivedFrom": [
+          "aat1"
+        ],
+        "type": "derived/json"
+      },
+      "dpp:streamedFrom": "/tmp/tmpnwv5ikbu/core/employment-us/aat1_json/data/85eca71b68b1ac971ed18efea8f9348b/aat1_json.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "85eca71b68b1ac971ed18efea8f9348b",
+      "mimetype": "text/csv",
+      "name": "aat1_json",
+      "path": "data/aat1_json.json",
+      "profile": "data-resource",
+      "rowcount": 71,
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "title": "Year",
+            "type": "year"
+          },
+          {
+            "name": "population",
+            "title": "Civilian noninstitutional population",
+            "type": "integer"
+          },
+          {
+            "name": "labor_force",
+            "title": "Civilian labor force (Total)",
+            "type": "string"
+          },
+          {
+            "name": "population_percent",
+            "title": "% of Population",
+            "type": "number"
+          },
+          {
+            "name": "employed_total",
+            "title": "Employed Total",
+            "type": "number"
+          },
+          {
+            "name": "employed_percent",
+            "title": "Employed % of Population",
+            "type": "number"
+          },
+          {
+            "name": "agrictulture_ratio",
+            "title": "(of which) Agriculture",
+            "type": "number"
+          },
+          {
+            "name": "nonagriculture_ratio",
+            "title": "(of which) Non-Agriculture",
+            "type": "number"
+          },
+          {
+            "name": "unemployed",
+            "title": "Unemployed (Number)",
+            "type": "integer"
+          },
+          {
+            "name": "unemployed_percent",
+            "title": "Unemployed % of labor force",
+            "type": "number"
+          },
+          {
+            "name": "not_in_labor",
+            "title": "Not in labor force",
+            "type": "integer"
+          },
+          {
+            "name": "footnotes",
+            "title": "Footnotes",
+            "type": "string"
+          }
+        ]
+      },
+      "signed": true,
+      "sources": [
+        {
+          "format": "text",
+          "mimetype": "text/plain",
+          "path": "archive/aat1.txt",
+          "title": "Sodurce file from BLS (human readable plain text)"
+        }
+      ],
+      "title": "CSV file (derived)"
+    },
+    {
+      "bytes": 552,
+      "dpp:streamedFrom": "/tmp/tmprddjyjl5/README.md",
+      "format": "md",
+      "name": "readme",
+      "path": "README.md"
+    }
+  ],
+  "sources": [
+    {
+      "path": "https://www.bls.gov/cps/cpsaat01.htm",
+      "title": "country-us gov employment economics statistics"
+    }
+  ],
+  "tags": [
+    "economics",
+    "country.us",
+    "unemployment",
+    "time series",
+    "employment",
+    "bls",
+    "topic.economics"
+  ],
+  "title": "US Employment and Unemployment rates since 1940",
+  "views": [
+    {
+      "name": "graph",
+      "spec": {
+        "group": "year",
+        "series": [
+          "unemployed_percent"
+        ],
+        "type": "column"
+      },
+      "specType": "simple",
+      "title": "US unemployment rates since 1940"
+    },
+    {
+      "name": "graph",
+      "spec": {
+        "group": "year",
+        "series": [
+          "population",
+          "employed_total",
+          "unemployed"
+        ],
+        "type": "column"
+      },
+      "specType": "simple",
+      "title": "US population, total employment and unemployment since 1940"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "bytes": 67932,
+  "datahub": {
+    "created": "2018-01-19T13:39:12.119388",
+    "findability": "unlisted",
+    "flowid": "a08d3588fbae0355042537595c65819d/gold-prices/8",
+    "modified": "2018-04-26T13:18:55.072794",
+    "owner": "AcckiyGerman",
+    "ownerid": "a08d3588fbae0355042537595c65819d"
+  },
+  "description": "",
+  "hash": "349c4d98be6188300182ebc1b01246cb",
+  "id": "a08d3588fbae0355042537595c65819d/gold-prices",
+  "licenses": [
+    {
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
+    }
+  ],
+  "name": "gold-prices",
+  "resources": [
+    {
+      "bytes": 16189,
+      "datahub": {
+        "type": "original"
+      },
+      "dpp:streamedFrom": "https://s3.amazonaws.com/rawstore.datahub.io/54d950ed189545d22b8012704881db3f.csv",
+      "encoding": "ISO-8859-2",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "data_original",
+      "path": "archive/data.csv",
+      "pathType": "local",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "any",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "name": "price",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 429,
+      "datahub": {
+        "type": "derived/report"
+      },
+      "description": "Validation report for tabular data",
+      "dpp:streamedFrom": "/tmp/tmp12p483ao/a08d3588fbae0355042537595c65819d/gold-prices/validation_report/data/2fac0852364aaf70e29b1e6140c9fb14/validation_report.json",
+      "format": "json",
+      "hash": "2fac0852364aaf70e29b1e6140c9fb14",
+      "name": "validation_report",
+      "path": "data/validation_report.json",
+      "profile": "data-resource"
+    },
+    {
+      "bytes": 16191,
+      "datahub": {
+        "derivedFrom": [
+          "data"
+        ],
+        "type": "derived/csv"
+      },
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmp12p483ao/a08d3588fbae0355042537595c65819d/gold-prices/data_csv/data/53441682955536c5ba7bd5cdb0a47648/data_csv.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "53441682955536c5ba7bd5cdb0a47648",
+      "mediatype": "text/csv",
+      "name": "data_csv",
+      "path": "data/data_csv.csv",
+      "pathType": "local",
+      "profile": "data-resource",
+      "rowcount": 818,
+      "schema": {
+        "fields": [
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "decimalChar": ".",
+            "groupChar": "",
+            "name": "price",
+            "type": "number"
+          }
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 32995,
+      "datahub": {
+        "derivedFrom": [
+          "data"
+        ],
+        "type": "derived/json"
+      },
+      "dpp:streamedFrom": "/tmp/tmp12p483ao/a08d3588fbae0355042537595c65819d/gold-prices/data_json/data/d17db5a3ad72b4b4dabd347bff7b2a1b/data_json.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "d17db5a3ad72b4b4dabd347bff7b2a1b",
+      "mediatype": "text/csv",
+      "name": "data_json",
+      "path": "data/data_json.json",
+      "pathType": "local",
+      "profile": "data-resource",
+      "rowcount": 818,
+      "schema": {
+        "fields": [
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "name": "price",
+            "type": "number"
+          }
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 2128,
+      "dpp:streamedFrom": "/tmp/tmpqk8s_wf7/README.md",
+      "format": "md",
+      "name": "readme",
+      "path": "README.md"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Bundesbank statistics",
+      "path": "http://www.bundesbank.de/Navigation/EN/Statistics/Time_series_databases/Macro_economic_time_series/macro_economic_time_series_node.html?anker=AUSSENWIRTSCHAFTDEV",
+      "title": "Bundesbank statistics"
+    }
+  ],
+  "title": "Gold Prices (Monthly in USD)",
+  "views": [
+    {
+      "name": "graph",
+      "spec": {
+        "group": "date",
+        "series": [
+          "price"
+        ],
+        "type": "lines-and-points"
+      },
+      "specType": "simple",
+      "title": "Gold Prices (Monthly in USD)"
+    }
+  ]
+}
